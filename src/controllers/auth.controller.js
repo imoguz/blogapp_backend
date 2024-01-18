@@ -18,8 +18,6 @@ module.exports = {
         }
       }
     */
-    const { password } = req?.body || null;
-
     const data = await setUserJWT(req.body);
     if (data.error) {
       res.status(401).send(data.error);
